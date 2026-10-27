@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohamed Amr – Cybersecurity Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7f8;--surface:#ffffff;--ink:#17212b;--muted:#53606d;--line:#d5dce2;--accent:#1f5f8b;--accent-soft:#e3eef6;--note:#fff6dd;--note-ink:#5a4510;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171e;--surface:#17212b;--ink:#e6ecf1;--muted:#a1afbc;--line:#2c3945;--accent:#7db7e0;--accent-soft:#1d2f3d;--note:#2a2410;--note-ink:#e8d9a4}}
+:root[data-theme="dark"]{--bg:#10171e;--surface:#17212b;--ink:#e6ecf1;--muted:#a1afbc;--line:#2c3945;--accent:#7db7e0;--accent-soft:#1d2f3d;--note:#2a2410;--note-ink:#e8d9a4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;border-top:6px solid var(--accent);background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:56rem;margin:0 auto;padding:0 1.25rem 4rem}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
+h1{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.7rem;margin:3.2rem 0 1rem;padding-top:1.2rem;border-top:2px solid var(--ink)}
+h3{font-size:1.3rem;margin-bottom:.35rem}
+a{color:var(--accent);text-underline-offset:.15em}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header{padding:4rem 0 1.5rem}
+.role{font-size:1.3rem;margin:.6rem 0 1rem;color:var(--muted);max-width:40rem}
+.lede{max-width:42rem;margin:0 0 1.2rem}
+.links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0;padding:0;list-style:none;font-weight:600}
+.note{background:var(--note);color:var(--note-ink);border-left:4px solid var(--note-ink);padding:.8rem 1rem;margin:1.6rem 0 0;max-width:42rem;font-size:.98rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);padding:1.3rem 1.4rem;margin:0 0 1.4rem}
+.feat p{margin:.4rem 0}
+.feat dl{margin:.8rem 0 0;display:grid;grid-template-columns:8.5rem 1fr;gap:.3rem 1rem;font-size:.98rem}
+.feat dt{font-weight:600;color:var(--muted)}
+.feat dd{margin:0}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);padding:0 .5rem;border-radius:3px;font-size:.9rem;margin:0 .3rem .3rem 0}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:42rem;font-size:.97rem}
+th,td{text-align:left;padding:.6rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;background:var(--accent-soft)}
+tr:last-child td{border-bottom:0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.cols h3{font-size:1.15rem}
+ul.plain{margin:.3rem 0 0;padding-left:1.2rem}
+ul.plain li{margin:.3rem 0}
+details{margin-top:1rem}
+summary{cursor:pointer;font-weight:600}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+nav.top{display:flex;flex-wrap:wrap;gap:.3rem 1.5rem;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:600;font-size:.97rem}
+nav.top a{text-decoration:none}
+nav.top a:hover{text-decoration:underline}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:1.6rem 0 0}
+.glance div{background:var(--surface);padding:.85rem 1rem}
+.glance dt{font-size:.9rem;color:var(--muted)}
+.glance dd{margin:.15rem 0 0;font-weight:600}
+.feat{box-shadow:0 1px 0 var(--line)}
+.feat dd .tag{padding:.1rem .6rem}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--accent-soft) 45%,var(--surface))}
+.chips{margin:.2rem 0 0}
+@media print{nav.top{display:none}.glance{break-inside:avoid}}
+@media (max-width:600px){.feat dl{grid-template-columns:1fr}.feat dt{margin-top:.5rem}}
+@media print{:root{--bg:#fff;--surface:#fff;--ink:#000;--muted:#333;--line:#bbb;--accent:#1f4f75;--accent-soft:#eef3f7}.feat{break-inside:avoid}details>*{display:block}h2{break-after:avoid}}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Sections"><a href="#featured">Featured projects</a><a href="#all">All projects</a><a href="#skills">Skills</a><a href="#growth">Strengths and growth</a><a href="#journal">Progress journal</a></nav>
+<header>
+<h1>Mohamed Amr</h1>
+<p class="role">Cybersecurity student building hands-on Linux, networking and detection projects, seeking an entry-level security role.</p>
+<p class="lede">I’m studying for a Bachelor of Computer Science – Cyber Security at Lincoln University Malaysia (expected March 2029) and have finished Semester 2. I’m aiming for roles such as SOC Analyst Tier 1, Junior Security Analyst, Security Operations Analyst or junior network-security work. Everything below is student lab work, not professional employment.</p>
+<ul class="links">
+<li><a href="https://github.com/Notme3za">GitHub: Notme3za</a></li>
+<li><a href="https://www.linkedin.com/in/mohamed-amr-a09351444/">LinkedIn</a></li>
+<li><a href="mailto:mohamed.amr1662006@gmail.com">mohamed.amr1662006@gmail.com</a></li>
+</ul>
+<dl class="glance"><div><dt>Education</dt><dd>BCS Cyber Security, Semester 2 complete</dd></div><div><dt>Seeking</dt><dd>Entry-level SOC, security analyst and junior network-security roles</dd></div><div><dt>Certifications</dt><dd>None yet; studying for Network+</dd></div><div><dt>Portfolio</dt><dd>12 lab projects and 20 public progress posts</dd></div></dl>
+<p class="note"><strong>How to read this portfolio.</strong> I built these projects with AI guidance, running, testing and documenting each one in my own lab. I haven’t claimed independent authorship of the code or configuration. All work ran on my own VirtualBox lab and Packet Tracer, with small, simulated data. I hold no certifications yet and am studying for CompTIA Network+.</p>
+</header>
+
+<h2 id="featured">Featured projects</h2>
+
+<article class="feat">
+<h3>Project 10: Detection Engineering Lab</h3>
+<p>A detection rule for SSH password guessing against many usernames, tested against labelled cases instead of just demonstrated once.</p>
+<dl>
+<dt>What I built</dt><dd>A Sigma rule for failed SSH attempts from one source across at least four distinct usernames in five minutes, converted to SQL and run in SQLite against normalized lab auth events.</dd>
+<dt>Result</dt><dd>Four controlled failed attempts raised the alert; five scenario checks passed, including control cases. No login succeeded.</dd>
+<dt>Limits</dt><dd>Small lab dataset. An alert marks a pattern to investigate, not proof of malicious intent.</dd>
+<dt>Skills</dt><dd><span class="tag">Sigma</span><span class="tag">SQLite</span><span class="tag">Detection testing</span><span class="tag">SSH logs</span></dd>
+<dt>Evidence</dt><dd><a href="https://github.com/Notme3za/project10-detection-engineering">project10-detection-engineering</a></dd>
+</dl>
+</article>
+
+<article class="feat">
+<h3>Project 8: Centralized Logging and Detection</h3>
+<p>SSH authentication events collected through rsyslog, with a Python detector watching for brute-force patterns.</p>
+<dl>
+<dt>What I built</dt><dd>rsyslog forwarding of SSH auth events, adjusted to capture both AUTH and authpriv facilities, plus a Python detector that alerts on five failed passwords from one source in five minutes.</dd>
+<dt>Result</dt><dd>One attempt below the threshold stayed quiet; five attempts triggered an alert.</dd>
+<dt>Limits</dt><dd>Single VM with loopback forwarding, not a multi-host deployment.</dd>
+<dt>Skills</dt><dd><span class="tag">rsyslog</span><span class="tag">Python</span><span class="tag">Log analysis</span><span class="tag">Threshold detection</span></dd>
+<dt>Evidence</dt><dd><a href="https://github.com/Notme3za/project8-centralized-logging">project8-centralized-logging</a></dd>
+</dl>
+</article>
+
+<article class="feat">
+<h3>Project 9: Network Incident Investigation</h3>
+<p>One deliberate failed SSH login, traced from packet capture to a written timeline.</p>
+<dl>
+<dt>What I built</dt><dd>A tcpdump capture of a failed SSH login from my Windows PC to the Linux Mint lab VM, correlated with journalctl auth logs into a timeline, with SHA-256 hashes recorded for evidence integrity.</dd>
+<dt>Result</dt><dd>The evidence showed a failed attempt, not a compromise, and the report says exactly that.</dd>
+<dt>Handling</dt><dd>Raw captures and logs are excluded from the public repo; only a sanitized report is published.</dd>
+<dt>Skills</dt><dd><span class="tag">tcpdump</span><span class="tag">journalctl</span><span class="tag">Timeline building</span><span class="tag">Evidence handling</span></dd>
+<dt>Evidence</dt><dd><a href="https://github.com/Notme3za/project9-network-incident-investigation">project9-network-incident-investigation</a></dd>
+</dl>
+</article>
+
+<article class="feat">
+<h3>Project 11: Incident Response Triage Automation</h3>
+<p>A Python tool that turns a simulated alert into a structured case report for a human to review.</p>
+<dl>
+<dt>What I built</dt><dd>A tool that accepts simulated SSH spray alert JSON, validates fields, hashes the input and writes a Markdown case report with findings and containment recommendations for human review. It includes overwrite protection.</dd>
+<dt>Limits</dt><dd>It reads simulated alerts only. It doesn’t inspect live logs or change system security. Raw logs and generated reports are kept out of the repo.</dd>
+<dt>Skills</dt><dd><span class="tag">Python</span><span class="tag">Incident documentation</span><span class="tag">Input validation</span><span class="tag">Triage workflow</span></dd>
+<dt>Evidence</dt><dd><a href="https://github.com/Notme3za/project11-incident-response">project11-incident-response</a></dd>
+</dl>
+</article>
+
+<article class="feat">
+<h3>Project 6: Secure Enterprise Network Lab</h3>
+<p>A segmented small-office network in Cisco Packet Tracer, a foundational lab and not a production design.</p>
+<dl>
+<dt>What I built</dt><dd>HR, IT, server and management VLANs with router-on-a-stick routing, ACLs, a management SVI, simulated syslog and SSH from an IT PC. A separate Linux Mint VM was used for route inspection and a tcpdump ICMP capture.</dd>
+<dt>Skills</dt><dd><span class="tag">VLANs</span><span class="tag">ACLs</span><span class="tag">Inter-VLAN routing</span><span class="tag">Packet Tracer</span></dd>
+<dt>Evidence</dt><dd><a href="https://github.com/Notme3za/secure-enterprise-network-lab">secure-enterprise-network-lab</a> (.pkt file, README, Git guide)</dd>
+</dl>
+</article>
+
+<h2 id="all">All projects</h2>
+<div class="tablewrap">
+<table>
+<thead><tr><th>#</th><th>Project</th><th>What it shows</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Network Traffic Investigation</td><td>DNS, TCP and TLS captures with Wireshark and tcpdump; VirtualBox NAT vs bridged comparison</td><td>Write-up in progress</td></tr>
+<tr><td>2</td><td>Linux System Audit Toolkit</td><td>Bash inventory of IPs, routes, listening sockets and disk use, with documented observations and limits</td><td><a href="https://github.com/Notme3za/linux-system-audit-toolkit">Repo</a></td></tr>
+<tr><td>3</td><td>VLAN, DHCP and Inter-VLAN Routing Lab</td><td>Packet Tracer HR (VLAN 10) and IT (VLAN 20) subnets, router subinterfaces, DHCP leases</td><td><a href="https://github.com/Notme3za/VLAN-DHCP-Inter-VLAN-Routing-Lab">Repo</a></td></tr>
+<tr><td>4</td><td>Linux Security Hardening Lab</td><td>UFW default-deny, Avahi disabled, tightened permissions, SUID review, post-update checks</td><td><a href="https://github.com/Notme3za/Linux-Security-Hardening-Lab">Repo</a></td></tr>
+<tr><td>5</td><td>Linux Server Administration and Access Control</td><td>Root login disabled, allowed users limited, key-based auth added (password auth still enabled)</td><td><a href="https://github.com/Notme3za/Linux-Server-Administration-Access-Control-Lab">Repo</a></td></tr>
+<tr><td>6</td><td>Secure Enterprise Network Lab</td><td>VLANs, ACLs, router-on-a-stick, simulated syslog</td><td><a href="https://github.com/Notme3za/secure-enterprise-network-lab">Repo</a></td></tr>
+<tr><td>7</td><td>Network Checker (Python)</td><td>Standard-library port checker with JSON config, timeouts, PASS/FAIL/ERROR results and JSON/CSV reports; timeouts treated as inconclusive</td><td><a href="https://github.com/Notme3za/project7-network-checker">Repo</a></td></tr>
+<tr><td>8</td><td>Centralized Logging and Detection</td><td>rsyslog collection and a Python brute-force detector</td><td><a href="https://github.com/Notme3za/project8-centralized-logging">Repo</a></td></tr>
+<tr><td>9</td><td>Network Incident Investigation</td><td>Packet capture and auth-log correlation into a timeline</td><td><a href="https://github.com/Notme3za/project9-network-incident-investigation">Repo</a></td></tr>
+<tr><td>10</td><td>Detection Engineering Lab</td><td>Sigma rule tested against labelled cases</td><td><a href="https://github.com/Notme3za/project10-detection-engineering">Repo</a></td></tr>
+<tr><td>11</td><td>Incident Response Automation</td><td>Alert-to-case-report triage tool</td><td><a href="https://github.com/Notme3za/project11-incident-response">Repo</a></td></tr>
+<tr><td>12</td><td>Linux Security Audit and Remediation</td><td>Lynis audit, one package warning reviewed and cleared by applying five updates; hardening index stayed at 61</td><td><a href="https://github.com/Notme3za/project12-linux-security-audit">Repo</a></td></tr>
+<tr><td>Side</td><td>Python Subnet Calculator</td><td>CIDR calculator using Python’s ipaddress module; tested /24, /26, /31, /32 and invalid input</td><td><a href="https://github.com/Notme3za/python-subnet-calculator">Repo</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="skills">Skills I have used</h2>
+<div class="cols">
+<div><h3>Systems and scripting</h3><p class="chips"><span class="tag">Linux Mint</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Git and GitHub</span><span class="tag">VirtualBox</span><span class="tag">SSH</span><span class="tag">UFW</span><span class="tag">Lynis</span></p></div>
+<div><h3>Networking</h3><p class="chips"><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">VLANs</span><span class="tag">Inter-VLAN routing</span><span class="tag">ACLs</span><span class="tag">Subnetting and CIDR</span><span class="tag">Packet Tracer</span><span class="tag">Wireshark</span><span class="tag">tcpdump</span></p></div>
+<div><h3>Security operations</h3><p class="chips"><span class="tag">rsyslog</span><span class="tag">Log analysis</span><span class="tag">Sigma rules</span><span class="tag">SQLite queries</span><span class="tag">Incident timelines</span><span class="tag">Incident documentation</span><span class="tag">Evidence hashing</span></p></div>
+</div>
+<p>These are student-project skills. They don’t add up to professional experience, and I’m not listing proficiency levels.</p>
+
+<h2 id="growth">Strengths and development areas</h2>
+<div class="cols">
+<div>
+<h3>Strengths</h3>
+<ul class="plain">
+<li><strong>Honest evidence.</strong> Projects 9, 10 and 11 state what the evidence does and doesn’t prove, and Project 10 includes control cases.</li>
+<li><strong>Careful handling.</strong> Raw captures and logs stay out of public repos, and Project 11 won’t overwrite existing reports.</li>
+<li><strong>Steady output.</strong> Twelve documented projects and a side tool, with 20 public progress posts on LinkedIn.</li>
+<li><strong>Connects layers.</strong> Work moves from network design (Project 6) to logs (Project 8) to detection and response (Projects 10 and 11).</li>
+</ul>
+</div>
+<div>
+<h3>Currently building</h3>
+<ul class="plain">
+<li><strong>Independent builds.</strong> I used AI guidance throughout, so I’m rebuilding pieces solo to prove I can write and debug them myself.</li>
+<li><strong>Scale and tooling.</strong> My labs are single-VM and small. I haven’t used a SIEM or multi-host log pipelines yet.</li>
+<li><strong>Certification.</strong> Network+ study is at Professor Messer video 36 (routing technologies); no exam is booked yet.</li>
+<li><strong>Windows and enterprise.</strong> I haven’t worked with Windows event logs or Active Directory.</li>
+<li><strong>Polish.</strong> Project 1 still needs a public write-up, and Project 3 needs cross-VLAN test evidence before I claim it.</li>
+</ul>
+</div>
+</div>
+
+<h2 id="journal">Progress journal</h2>
+<p>I’ve published 20 LinkedIn posts documenting this work, newest first.</p>
+<details>
+<summary>Show post links</summary>
+<p>
+<a href="https://lnkd.in/p/genajcQP">1</a> · <a href="https://lnkd.in/p/g9xaUFAq">2</a> · <a href="https://lnkd.in/p/ggwCYFcm">3</a> · <a href="https://lnkd.in/p/gVuCrhsD">4</a> · <a href="https://lnkd.in/p/gdBCS_hF">5</a> · <a href="https://lnkd.in/p/gE9cx9ZU">6</a> · <a href="https://lnkd.in/p/gXQ5KjDf">7</a> · <a href="https://lnkd.in/p/grPZNc3Z">8</a> · <a href="https://lnkd.in/p/gtd2-SXA">9</a> · <a href="https://lnkd.in/p/g5kJd7Ns">10</a> · <a href="https://lnkd.in/p/gQ7T9MNM">11</a> · <a href="https://lnkd.in/p/gk-W3Bnt">12</a> · <a href="https://lnkd.in/p/gJZ6khc3">13</a> · <a href="https://lnkd.in/p/gfMBv_EA">14</a> · <a href="https://lnkd.in/p/gMxY7E94">15</a> · <a href="https://lnkd.in/p/g8SqGJXE">16</a> · <a href="https://lnkd.in/p/gdhhNejZ">17</a> · <a href="https://lnkd.in/p/gV-w_c5w">18</a> · <a href="https://lnkd.in/p/g4VtKdrg">19</a> · <a href="https://lnkd.in/p/gMW6Q_Re">20</a>
+</p>
+</details>
+
+<footer>Mohamed Amr · Lincoln University Malaysia, BCS Cyber Security · <a href="mailto:mohamed.amr1662006@gmail.com">Get in touch</a>. To save as PDF, use your browser’s Print option.</footer>
+</main>
+</body>
+</html>
