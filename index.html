@@ -72,11 +72,23 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--accent-soft) 45%,
 <li><a href="https://www.linkedin.com/in/mohamed-amr-a09351444/">LinkedIn</a></li>
 <li><a href="mailto:mohamed.amr1662006@gmail.com">mohamed.amr1662006@gmail.com</a></li>
 </ul>
-<dl class="glance"><div><dt>Education</dt><dd>BCS Cyber Security, Semester 2 complete</dd></div><div><dt>Seeking</dt><dd>Entry-level SOC, security analyst and junior network-security roles</dd></div><div><dt>Certifications</dt><dd>None yet; studying for Network+</dd></div><div><dt>Portfolio</dt><dd>12 lab projects and 20 public progress posts</dd></div></dl>
-<p class="note"><strong>How to read this portfolio.</strong> I built these projects with AI guidance, running, testing and documenting each one in my own lab. I haven’t claimed independent authorship of the code or configuration. All work ran on my own VirtualBox lab and Packet Tracer, with small, simulated data. I hold no certifications yet and am studying for CompTIA Network+.</p>
+<dl class="glance"><div><dt>Education</dt><dd>BCS Cyber Security, Semester 2 complete</dd></div><div><dt>Seeking</dt><dd>Entry-level SOC, security analyst and junior network-security roles</dd></div><div><dt>Certifications</dt><dd>None yet; studying for Network+</dd></div><div><dt>Portfolio</dt><dd>13 lab projects and 20 public progress posts</dd></div></dl>
+<p class="note"><strong>How to read this portfolio.</strong> I built these projects with AI guidance, running, testing and documenting each one in my own lab. I haven’t claimed independent authorship of the code or configuration. All work ran on my own lab (VirtualBox, Packet Tracer, and my own PC as the monitored machine in Project 13), using small, controlled test data. I hold no certifications yet and am studying for CompTIA Network+.</p>
 </header>
 
 <h2 id="featured">Featured projects</h2>
+
+<article class="feat">
+<h3>Project 13: Home SIEM Lab (Wazuh and Sysmon)</h3>
+<p>A single-node Wazuh SIEM collecting Windows Security and Sysmon logs from my own PC, with one custom detection rule that I wrote and tested.</p>
+<dl>
+<dt>What I built</dt><dd>Wazuh manager, indexer and dashboard (v4.14.9) on a Linux Mint VM, with my Windows 11 PC enrolled as an agent over a UFW-restricted connection (TCP 1514 and 1515). Sysmon on the PC adds process events alongside the Security log.</dd>
+<dt>Result</dt><dd>A custom level 12 rule (MITRE ATT&amp;CK T1098) for Windows Event 4732, a user added to the local Administrators group, fired in a controlled test. My first version matched a hardcoded test username; I rewrote it around the event’s group field after reading the raw event.</dd>
+<dt>Limits</dt><dd>One manager, one agent, default Sysmon configuration. I haven’t run negative tests yet, so I can’t say how often the rule would raise false alarms. An alert means look closer, not proof of an attack.</dd>
+<dt>Skills</dt><dd><span class="tag">Wazuh</span><span class="tag">Sysmon</span><span class="tag">Windows event logs</span><span class="tag">Rule writing</span><span class="tag">MITRE ATT&amp;CK</span></dd>
+<dt>Evidence</dt><dd><a href="https://github.com/Notme3za/project-13-wazuh-home-siem">project-13-wazuh-home-siem</a></dd>
+</dl>
+</article>
 
 <article class="feat">
 <h3>Project 10: Detection Engineering Lab</h3>
@@ -152,6 +164,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--accent-soft) 45%,
 <tr><td>10</td><td>Detection Engineering Lab</td><td>Sigma rule tested against labelled cases</td><td><a href="https://github.com/Notme3za/project10-detection-engineering">Repo</a></td></tr>
 <tr><td>11</td><td>Incident Response Automation</td><td>Alert-to-case-report triage tool</td><td><a href="https://github.com/Notme3za/project11-incident-response">Repo</a></td></tr>
 <tr><td>12</td><td>Linux Security Audit and Remediation</td><td>Lynis audit, one package warning reviewed and cleared by applying five updates; hardening index stayed at 61</td><td><a href="https://github.com/Notme3za/project12-linux-security-audit">Repo</a></td></tr>
+<tr><td>13</td><td>Home SIEM Lab (Wazuh and Sysmon)</td><td>Single-node Wazuh SIEM with a Windows agent and Sysmon; custom rule for Event 4732 mapped to ATT&amp;CK T1098</td><td><a href="https://github.com/Notme3za/project-13-wazuh-home-siem">Repo</a></td></tr>
 <tr><td>Side</td><td>Python Subnet Calculator</td><td>CIDR calculator using Python’s ipaddress module; tested /24, /26, /31, /32 and invalid input</td><td><a href="https://github.com/Notme3za/python-subnet-calculator">Repo</a></td></tr>
 </tbody>
 </table>
@@ -161,7 +174,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--accent-soft) 45%,
 <div class="cols">
 <div><h3>Systems and scripting</h3><p class="chips"><span class="tag">Linux Mint</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Git and GitHub</span><span class="tag">VirtualBox</span><span class="tag">SSH</span><span class="tag">UFW</span><span class="tag">Lynis</span></p></div>
 <div><h3>Networking</h3><p class="chips"><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">VLANs</span><span class="tag">Inter-VLAN routing</span><span class="tag">ACLs</span><span class="tag">Subnetting and CIDR</span><span class="tag">Packet Tracer</span><span class="tag">Wireshark</span><span class="tag">tcpdump</span></p></div>
-<div><h3>Security operations</h3><p class="chips"><span class="tag">rsyslog</span><span class="tag">Log analysis</span><span class="tag">Sigma rules</span><span class="tag">SQLite queries</span><span class="tag">Incident timelines</span><span class="tag">Incident documentation</span><span class="tag">Evidence hashing</span></p></div>
+<div><h3>Security operations</h3><p class="chips"><span class="tag">rsyslog</span><span class="tag">Log analysis</span><span class="tag">Sigma rules</span><span class="tag">SQLite queries</span><span class="tag">Wazuh SIEM</span><span class="tag">Sysmon</span><span class="tag">Windows event logs</span><span class="tag">MITRE ATT&amp;CK mapping</span><span class="tag">Incident timelines</span><span class="tag">Incident documentation</span><span class="tag">Evidence hashing</span></p></div>
 </div>
 <p>These are student-project skills. They don’t add up to professional experience, and I’m not listing proficiency levels.</p>
 
@@ -170,19 +183,19 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--accent-soft) 45%,
 <div>
 <h3>Strengths</h3>
 <ul class="plain">
-<li><strong>Honest evidence.</strong> Projects 9, 10 and 11 state what the evidence does and doesn’t prove, and Project 10 includes control cases.</li>
+<li><strong>Honest evidence.</strong> Projects 9, 10, 11 and 13 state what the evidence does and doesn’t prove, and Project 10 includes control cases.</li>
 <li><strong>Careful handling.</strong> Raw captures and logs stay out of public repos, and Project 11 won’t overwrite existing reports.</li>
-<li><strong>Steady output.</strong> Twelve documented projects and a side tool, with 20 public progress posts on LinkedIn.</li>
-<li><strong>Connects layers.</strong> Work moves from network design (Project 6) to logs (Project 8) to detection and response (Projects 10 and 11).</li>
+<li><strong>Steady output.</strong> Thirteen documented projects and a side tool, with 20 public progress posts on LinkedIn.</li>
+<li><strong>Connects layers.</strong> Work moves from network design (Project 6) to logs (Project 8) to detection and response (Projects 10, 11 and 13).</li>
 </ul>
 </div>
 <div>
 <h3>Currently building</h3>
 <ul class="plain">
 <li><strong>Independent builds.</strong> I used AI guidance throughout, so I’m rebuilding pieces solo to prove I can write and debug them myself.</li>
-<li><strong>Scale and tooling.</strong> My labs are single-VM and small. I haven’t used a SIEM or multi-host log pipelines yet.</li>
-<li><strong>Certification.</strong> Network+ study is mostly with Professor Messer's yt playlist. no exam is booked yet.</li>
-<li><strong>Windows and enterprise.</strong> I haven’t worked with Windows event logs or Active Directory.</li>
+<li><strong>Scale and tooling.</strong> Project 13 was my first SIEM and my first multi-host setup, with a single Windows agent. I haven’t worked with larger deployments, several log sources or detection tuning against real noise.</li>
+<li><strong>Certification.</strong> Network+ study is mostly with Professor Messer’s YouTube playlist; no exam is booked yet.</li>
+<li><strong>Windows and enterprise.</strong> I’ve read Windows Security and Sysmon logs in one lab, but I haven’t worked with Active Directory or enterprise Windows environments.</li>
 </ul>
 </div>
 </div>
