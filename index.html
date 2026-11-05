@@ -83,7 +83,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--accent-soft) 45%,
 <p>A single-node Wazuh SIEM collecting Windows Security and Sysmon logs from my own PC, with one custom detection rule that I wrote and tested.</p>
 <dl>
 <dt>What I built</dt><dd>Wazuh manager, indexer and dashboard (v4.14.9) on a Linux Mint VM, with my Windows 11 PC enrolled as an agent over a UFW-restricted connection (TCP 1514 and 1515). Sysmon on the PC adds process events alongside the Security log.</dd>
-<dt>Result</dt><dd>A custom level 12 rule (MITRE ATT&amp;CK T1098) for Windows Event 4732, a user added to the local Administrators group, fired in a controlled test. My first version matched a hardcoded test username; I rewrote it around the event’s group field after reading the raw event.</dd>
+<dt>Result</dt><dd>A custom level 12 rule (MITRE ATT&amp;CK T1098) for Windows Event 4732, a user added to the local Administrators group, In a later re-test, Wazuh’s built-in rule 60154 caught that event and my rule did not fire, so it adds nothing beyond the built-in rule. What I learned: my first version matched a hardcoded test username, and I rewrote it around the event’s group field after reading the raw event.</dd>
 <dt>Limits</dt><dd>One manager, one agent, default Sysmon configuration. I haven’t run negative tests yet, so I can’t say how often the rule would raise false alarms. An alert means look closer, not proof of an attack.</dd>
 <dt>Skills</dt><dd><span class="tag">Wazuh</span><span class="tag">Sysmon</span><span class="tag">Windows event logs</span><span class="tag">Rule writing</span><span class="tag">MITRE ATT&amp;CK</span></dd>
 <dt>Evidence</dt><dd><a href="https://github.com/Notme3za/project-13-wazuh-home-siem">project-13-wazuh-home-siem</a></dd>
